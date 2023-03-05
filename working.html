@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>How it works</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="nav justify-content-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark font-weight-bold" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item font-weight-bold">
+                        <a class="nav-link text-dark font-weight-bold" href="working.html">How it Works</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="e50_19">
+        <div class="e51_11"></div>
+        <div class="e51_14"></div>
+        <div class="e51_15"></div>
+        <div class="e50_44">
+            <div class="e50_10"></div><span class="e50_25">The application first defines a set of colors to be detected in the input image, and creates a mask for each color range using the OpenCV library. It then counts the number 
+       of pixels that match each color mask, and adds the color name and count to a list if there are any matching pixels.</span>
+        </div>
+        <div class="e50_43">
+            <div class="e50_26"></div><span class="e50_31">The script then determines the color of the water by checking for blue or green pixels in the detected colors list. If there are blue pixels, the water is considered clear. 
+      If there are green pixels, the water is considered to have high organic content. If neither color is detected, the water is considered white.
+      </span>
+        </div>
+        <div class="e50_42">
+            <div class="e50_28"></div><span class="e50_32">The script also determines the color of the sediment by checking for brown pixels in the detected colors list. If brown pixels are detected, the sediment is considered brown. Otherwise, it is considered not detected.
+      </span>
+        </div>
+        <div class="e50_41">
+            <div class="e50_36"></div><span class="e50_38">The script then calculates the turbidity of the water by applying edge detection using the Canny algorithm in OpenCV to the grayscale image. The edges are dilated to fill
+      gaps and improve object detection, and contours are found using the find Contours function in OpenCV. The mean value of the edges is used to calculate the turbidity.</span>
+        </div>
+        <div class="e50_40">
+            <div class="e50_37"></div><span class="e50_39">The script then draws the detected contours on the input image using the draw Contours function in OpenCV, and saves the image with contours. Finally, it converts the image 
+       to base64 for display in the HTML template, and returns the results to the template.</span>
+        </div>
+        <div class="e50_49">
+            <div class="e50_48">
+                <div class="e50_45">
+                    <div class="e50_46"></div>
+                </div>
+            </div><span class="e50_20">This is a Python script that creates a web application using the Flask web framework. The application takes an image as input and analyzes it to determine the color 
+      of the water and sediment, as well as the turbidity of the water.</span>
+        </div><span class="e51_2">How it Works?</span>
+        <div class="e51_3"><img class="arrow" src="Arrow3.png" alt=""></div>
+        <div class="e51_4"> <img class="arrow" src="Arrow3.png" alt=""></div>
+        <div class="e51_5"><img class="arrow" src="Arrow3.png" alt=""></div>
+        <div class="e51_6"><img class="arrow" src="Arrow3.png" alt=""></div>
+        <div class="e51_7"><img class="arrow" src="Arrow3.png" alt=""></div>
+    </div>
+</body>
+
+</html>

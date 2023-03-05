@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality</title>
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="nav justify-content-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark font-weight-bold" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item font-weight-bold">
+                        <a class="nav-link text-dark font-weight-bold" href="working.html">How it Works</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="e4_3">
+        <div class="title" align="center">Water Quality Analysis for Checking Physical Characteristics Of Water </div>
+        <div class="e17_2"> </div> <span class="e17_4">Upload Image files</span><span class="e17_5">File should be jpg <br> <br>
+             <div class="temp">Enter the temperature of the atmosphere when the image was captured in °C: <input type="text"><br>
+                
+            <input type="submit" value="Enter" class="btn btn-secondary" background="#fff">
+            </div></span>
+
+        <div class="e17_3">
+            <form>
+                <div class="form-group text-center">
+                    <label for="exampleFormControlFile1">Choose the image</label><br>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </form>
+            <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+            <img id="drag1" draggable="true" ondragstart="drag(event)" width="438" height="260"> -->
+
+        </div>
+
+        <div class="e17_7"></div><span class="e17_8">Drag &Drop your file here</span>
+        <div class="e17_9"> </div><span class="e18_10">Upload
+            
+        </span>
+
+    </div>
+
+
+
+</body>
+
+</html>
